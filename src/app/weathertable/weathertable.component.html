@@ -1,0 +1,26 @@
+<div className="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>DAY</th>
+      <th>DESCRIPTION</th>
+      <th>HIGH/LOW</th>
+      <th>WIND SPEED</th>
+      <th>HUMIDITY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let weather of fiveDayForcast'>
+      <td>{{weather.dt_txt}}</td>
+      <td>{{weather.weather[0].description}}</td>
+      <td>{{(((weather.main.temp_max - 273.15) * 9/5) + 32).toFixed(2)}}°F / {{(((weather.main.temp_min - 273.15) * 9/5) + 32).toFixed(2)}} </td>
+      <td>{{weather.wind.speed}}</td>
+      <td>{{weather.main.humidity}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+

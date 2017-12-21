@@ -1,0 +1,12 @@
+
+<div class="row" [ngStyle]="{'textAlign':'center'}">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h1 className='idk'>{{weatherData.name}}</h1>
+        <h4>{{weatherData.fahrenheit}}°F  /  {{weatherData.celsius}}°C </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-content></ng-content>
